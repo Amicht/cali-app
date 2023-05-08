@@ -1,0 +1,226 @@
+{
+    "language": "English",
+    "direction": "ltr",
+    "navbar":{
+        "icon": "",
+        "home": "Home",
+        "get_started": "Get Started",
+        "about": "About",
+        "language": {
+            "btn_name": "language",
+            "modal_title": "Choose Language:",
+            "close_btn": "close"
+        }
+    },
+    "homeScreen": {
+        "title": [
+            {
+                "txt": "NO EQUIPMENT. NO ",
+                "ishighlighted": false
+            },
+            {
+                "txt": "EXCUSES.",
+                "ishighlighted": true
+            }
+        ],
+        "subtitle": "Let us help you to create your own body-weight workout program, costumized to your abillities and strength",
+        "actionBtns": [
+            "Get Started", 
+            "Learn More"
+        ]
+    },
+    "plansScreen":{
+        "unavailable": "Coming Soon",
+        "title": [
+            {
+                "txt": "READY TO START ",
+                "ishighlighted": true
+            },
+            {
+                "txt": "YOUR JOURNEY ",
+                "ishighlighted": false
+            },
+            {
+                "txt": "NOW WITH US",
+                "ishighlighted": true
+            }
+        ],
+        "joinBtn": "Join Now",
+        "subtitle": "Start your journey with us to get a balance and healthy body. You can choose the free plan and start right away.",
+        "plans": [
+            {
+                "name": "FREE PLAN",
+                "price": 0,
+                "features": [
+                    "No registration required",
+                    "Free consultation to coaches",
+                    "Access to the FitClub community"
+                ],
+                "isAvailable":true
+            },
+            {
+                "name": "PREMIUM PLAN",
+                "price": 25,
+                "features": [
+                    "5 hours of exercises",
+                    "Free consultation to coaches",
+                    "Access to minibar"
+                ],
+                "isAvailable":false
+            },
+            {
+                "name": "PRO PLAN",
+                "price": 35,
+                "features": [
+                    "8 hours of exercises",
+                    "Free consultation to private coaches",
+                    "Free fitness marchandise"
+                ],
+                "isAvailable":false
+            }
+        ]
+    },
+    "chooseProgramScreen":{
+        "title": [
+            {
+                "txt": "CHOOSE ",
+                "ishighlighted": true
+            },
+            {
+                "txt": "YOUR PROGRAM",
+                "ishighlighted": false
+            }
+        ],
+        "modalTitle": "Select one exercise from list: ",
+        "subtitle": "For each muscle group, choose a muscle you would like to work on from the list and click on it. Then select one exercise from the list (on top) by clicking on the 'Add to program' button. You must complete all steps before you can start the workout.",
+        "nextScreenBtn": "Start Workout",
+        "unCompletedMessage": "You must complete all 4 steps before you can start workout.",
+        "completedMessage": "You are all set! start workout now?",
+        "muscleGroups": [
+            {
+                "name": "pull",
+                "muscles":[
+                    "biceps",
+                    "forearms",
+                    "lats",
+                    "middle_back",
+                    "traps"
+                ]
+            },
+            {
+                "name": "push",
+                "muscles":[
+                    "chest",
+                    "triceps"
+                ]
+            },
+            {
+                "name": "core",
+                "muscles":[
+                    "abdominals",
+                    "abductors",
+                    "lower_back"
+                ]
+            },
+            {
+                "name": "squat",
+                "muscles":[
+                    "calves",
+                    "glutes",
+                    "hamstrings",
+                    "quadriceps",
+                    "adductors"
+                ]
+            }
+        ],
+        "exerciseCard":{
+            "p_titles": {
+                "instructions": "instructions",
+                "equipment": "equipment",
+                "difficulty": "difficulty" ,
+                "muscle": "muscle",
+                "type": "type"
+            }
+        },
+        "modalBtns":{
+            "close": "Close",
+            "add": "Add to program"
+        }
+        
+    },
+    "workout":{
+        "title": [
+            {
+                "txt": "IT'S ",
+                "ishighlighted": false
+            },
+            {
+                "txt": "GO ",
+                "ishighlighted": true
+            },
+            {
+                "txt": "TIME!",
+                "ishighlighted": false
+            }
+        ],
+        "txts":{
+            "p_titles":{
+                "break": "Take a brake, breathe... next exercise",
+                "work": "Exercise",
+                "instructions": "Instructions",
+                "completed":{
+                    "title": "Great Job (",
+                    "subtitle": "come back tommorow, persistence is the key!"
+                }
+            },
+            "start": "Workout Starts In",
+            "info":{
+                "muscle": "muscle",
+                "difficulty":"difficulty",
+                "set": "current set",
+                "exercise":"current exercise"
+            }
+        }
+    },
+    "errorPage":{
+        "title": [
+            {
+                "txt": "ERROR ",
+                "ishighlighted": false
+            },
+            {
+                "txt": "404",
+                "ishighlighted": true
+            }
+        ],
+        "subtitle": "This Page is not available. stop doing things you are not suppose to be doing and start workout",
+        "btnTxt": "Home page"
+    },
+    "about":{
+        "title": [
+            {
+                "txt": "ABOUT OUR ",
+                "ishighlighted": false
+            },
+            {
+                "txt": "PROGRAM",
+                "ishighlighted": true
+            }
+        ],
+        "subtitle": "The program focuses on full body training for the 4 muscle groups, combined with circuit training and calisthenics",
+        "paragraphs":[
+            {
+                "title": "Circuit training",
+                "content":"\"Circuit training is a form of body conditioning that involves endurance training, resistance training, high-intensity aerobics, and exercises performed in a circuit, similar to high-intensity interval training. It targets strength building and muscular endurance. An exercise \"circuit\" is one completion of all set exercises in the program. When one circuit is completed, one begins the first exercise again for the next circuit. Traditionally, the time between exercises in circuit training is short and often with rapid movement to the next exercise.\" (wikipedia)"
+            },
+            {
+                "title": "Calicthenics",
+                "content": "Calisthenics is a form of strength training consisting of a variety of movements that exercise large muscle groups (gross motor movements), such as standing, grasping, pushing, etc. These exercises are often performed rhythmically and with minimal equipment, as bodyweight exercises. They are intended to increase strength, fitness, and flexibility, through movements such as pulling, pushing, bending, jumping, or swinging, using one's body weight for resistance in pull-ups, push-ups, squats, etc. Calisthenics can provide the benefits of muscular and aerobic conditioning, in addition to improving psychomotor skills such as balance, agility, and coordination."
+            },
+            {
+                "title": "Muscle Groups",
+                "content": "Human movement can be categorised into the 4 categories: Push, Pull, Hinge, Squat. If you train using this template you will hit all the muscles in your body. And depending on your goals, you can change the sets and reps to focus more on strength, muscle growth or endurance. Dan John sums it up nicely: “Almost universally, getting stronger in the fundamental human movements is going to help with your goals, whether they be fat loss, hypertrophy or improved sports performance.”"
+            }
+        ]
+    }
+}

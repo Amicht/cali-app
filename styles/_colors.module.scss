@@ -1,0 +1,24 @@
+$light: #e8eddf;
+$blue: #cfdbd5;
+$yellow: #f5cb5c;
+$grey: #333533;
+$dark: #242423;
+$green:#008000;
+$orange:#ffa500;
+$red:#ff0000;
+
+$primary:       $blue;
+$secondary:     $yellow;
+$success:       $grey;
+$danger: $red;
+$info: $green;
+$alert: $orange;
+
+
+$dark-bg-gardient: linear-gradient(175deg, $success ,darken($success, 10%));
+$secondary-bg-gardient: linear-gradient(175deg, $secondary ,darken($secondary, 10%));
+$light-bg-gardient: linear-gradient(90deg, darken($light, 10%), $light);
+
+
+@import "~bootstrap/scss/bootstrap";
+

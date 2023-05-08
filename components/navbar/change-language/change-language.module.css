@@ -1,0 +1,7 @@
+.langOption{
+    font-size: 30px;
+    width: fit-content;
+}
+.langOption:hover{
+    cursor: pointer;
+}
