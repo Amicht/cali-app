@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react';
 import {  WorkoutModel } from '../../models/workoutModel';
 import { ExerciseModel } from '../../models/ExerciseModel';
 import { getProgramFromStorage, setProgramToStorage  } from '../local-storage/workoutStorage';
-import { getExercises } from '../workoutApi/apiService';
 import { ApiQueryParamsI } from '../../models/ApiQueryParamsI';
 import { WorkourProgramCtxtI } from '../../models/WorkourProgramCtxtI';
 import { initialProgramValue } from './workoutSettings';
@@ -45,16 +44,15 @@ const WorkourProgramService = (props:{children?:ReactNode}) => {
             setExercises(exercisesCache[apiCallParams.muscle])
         }
         else{
-            const exs = await getExercises(apiCallParams)
-                .catch(() => null);
-                if(exs == null) {
-                    router.push('404');
-                    return;
-                }
-                else{
-                    setExercises(exs);
-                    exercisesCache[apiCallParams.muscle] = exs;
-                }
+            const apiurl = `/api/getExercisesByMuscle?muscle=${apiCallParams.muscle}`
+            await fetch(apiurl)
+                .then(res => res.json())
+                .then((res:ExerciseModel[]) => {
+                    console.log(res);
+                    setExercises(res);
+                    exercisesCache[apiCallParams.muscle] = res;
+                })
+                .catch(() => router.push('404'));
         }
     } 
 
