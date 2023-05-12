@@ -1,5 +1,5 @@
 import React from 'react'
-import PageTitle from '../../components/titles/PageTitle';
+import PageTitle from '@/components/titles/PageTitle';
 import { LanguageCtst } from '@/services/context/LanguageService';
 import { WorkourProgramCtxt } from '@/services/context/WorkoutProgramService';
 import { useRouter } from 'next/router';
@@ -9,6 +9,7 @@ import { WorkoutModel } from '@/models/workoutModel';
 import WorkoutSet from '@/components/workout-page/workout-set/WorkoutSet';
 import WorkoutInfo from '@/components/workout-page/workoutInfo/WorkoutInfo';
 import { PreWorkout } from '@/components/workout-page/pre-workout/PreWorkout';
+import Head from 'next/head';
 
 
 const WorkoutPage = () => {
@@ -21,7 +22,7 @@ const WorkoutPage = () => {
     const [isBreak,setIsBreak] = React.useState(false);
     const [isWorkoutCompleted,setIsWorkoutCompleted] = React.useState(false);
     const [currentSet,setCurrentSet] = React.useState(1);
-    
+    const headTitle = language.workout.title.map(s => s.txt).join(' ');
 
 
     const setNextPhase = () => {
@@ -70,12 +71,16 @@ const WorkoutPage = () => {
         else router.push('/');
     },[]);
 
+    if(router.isFallback) return router.push('/');
     
     
   return (
     <div 
         style={{direction:`${language.direction === 'rtl'? 'rtl': 'ltr'}`}}
         className='screen text-primary mt-5'>
+        <Head>
+            <title>{headTitle}</title>
+        </Head>
 
         <PageTitle title={language.workout.title}
             direction={language.direction}/>
@@ -112,12 +117,7 @@ const WorkoutPage = () => {
                 startInCounter={workoutSettings.startInCounter} 
                 onTimeoutHandler={onTimoutHandler}
             />}
-
-
-
         </> :null}
-
-
     </div>
   )
 }

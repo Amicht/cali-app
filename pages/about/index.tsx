@@ -2,14 +2,20 @@ import React from 'react'
 import PageSubtitle from '../../components/titles/PageSubtitle';
 import PageTitle from '../../components/titles/PageTitle';
 import { LanguageCtst } from '@/services/context/LanguageService';
+import Head from 'next/head';
 
 
 const About = () => {
     const {language} = React.useContext(LanguageCtst);
     const {paragraphs,subtitle,title} = language.about;
+    const headTitle = title.map(s => s.txt).join(' ')
   return (
     <div className='screen my-5'
         style={{direction: language.direction==='rtl'? 'rtl':'ltr'}}>
+        <Head>
+          <title>{headTitle}</title>
+          <meta name='description' content={subtitle}></meta>
+        </Head>
         <PageTitle title={title}/>
         <PageSubtitle subtitle={subtitle}/>
         {paragraphs.map((p) => 

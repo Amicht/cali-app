@@ -8,6 +8,7 @@ import StepBtnComponent from '@/components/choose-program/stepper/StepBtnCompone
 import MuscleGroupCard from '@/components/choose-program/muscle-group-card/MuscleGroupCard';
 import StartStepCard from '@/components/choose-program/stepper/StartStepCard';
 import MuscleGroupModal from '@/components/choose-program/muscle-group-modal/MuscleGroupModal';
+import Head from 'next/head';
 
 
 const ChooseProgram = () => {
@@ -19,6 +20,7 @@ const ChooseProgram = () => {
   const [currentStep, setCurrentStep] = React.useState(0);
   const muscleGroups = language.chooseProgramScreen.muscleGroups;
   const startWorkoutStepNumber = 4;
+  const headTitle = language.chooseProgramScreen.title.map(s => s.txt).join(' ');
   
   
   const [show, setShow] = React.useState(false);
@@ -65,6 +67,10 @@ const ChooseProgram = () => {
 
   return (
     <div className='screen mt-4'> 
+      <Head>
+        <title>{headTitle}</title>
+        <meta name='description' content={language.chooseProgramScreen.subtitle}></meta>
+      </Head>
       <PageTitle 
         title={language.chooseProgramScreen.title}
           />

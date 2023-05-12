@@ -10,6 +10,7 @@ import PageSubtitle from '@/components/titles/PageSubtitle'
 
 export default function Home() {
   const {language} = React.useContext(LanguageCtst);
+  const headTitle = language.homeScreen.title.map(s => s.txt).join(' ');
   const btns:CostumBtnI[] = [
     {
       side: 'btn-left', 
@@ -27,7 +28,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Intro page</title>
+        <title>{headTitle}</title>
+        <meta name='description' content={language.homeScreen.subtitle}></meta>
       </Head>
       <main>
       <div className='py-3 mt-4 screen'>
