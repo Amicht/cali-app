@@ -25,7 +25,6 @@ export const PreWorkout: React.FC<Props> = ({
     <Timer 
         key={'start-timer'}
         startTime={startInCounter}
-        isBreak={true}
         onTimoutHandler={onTimeoutHandler} 
     />
     <h4>{firstExerciseName}</h4>
