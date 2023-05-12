@@ -48,7 +48,6 @@ const WorkourProgramService = (props:{children?:ReactNode}) => {
             await fetch(apiurl)
                 .then(res => res.json())
                 .then((res:ExerciseModel[]) => {
-                    console.log(res);
                     setExercises(res);
                     exercisesCache[apiCallParams.muscle] = res;
                 })
