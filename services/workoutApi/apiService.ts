@@ -3,8 +3,8 @@ import { ExerciseModel } from "../../models/ExerciseModel";
 import { ApiQueryParamsI } from '../../models/ApiQueryParamsI';
 
 
-const APIKEY = "gyQd309gy5ZHfmDwWJVbrw==UKKBGeuLvOWeU6u7";
-const SERVERURL = "https://api.api-ninjas.com/v1/exercises";
+const APIKEY = process.env.APIKEY;
+const SERVERURL="https://api.api-ninjas.com/v1/exercises";
 
 
 
