@@ -44,9 +44,8 @@ const WorkourProgramService = (props:{children?:ReactNode}) => {
             setExercises(exercisesCache[apiCallParams.muscle])
         }
         else{
-            const serverURL = process.env.NEXT_PUBLIC_HOST;
             const apiurl = `/api/getExercisesByMuscle?muscle=${apiCallParams.muscle}`
-            await fetch(serverURL + apiurl)
+            await fetch(apiurl)
                 .then(res => res.json())
                 .then((res:ExerciseModel[]) => {
                     console.log(res);
