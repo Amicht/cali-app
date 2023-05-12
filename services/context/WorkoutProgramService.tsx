@@ -6,7 +6,7 @@ import { getExercises } from '../workoutApi/apiService';
 import { ApiQueryParamsI } from '../../models/ApiQueryParamsI';
 import { WorkourProgramCtxtI } from '../../models/WorkourProgramCtxtI';
 import { initialProgramValue } from './workoutSettings';
-
+import { useRouter } from 'next/router';
 
 
 export const WorkourProgramCtxt = React.createContext<WorkourProgramCtxtI>({});
@@ -24,7 +24,7 @@ const WorkourProgramService = (props:{children?:ReactNode}) => {
     const [userProgram,setUserProgram] = React.useState<WorkoutModel>(initialProgramValue);
     const [exercises,setExercises] = React.useState<ExerciseModel[]>([]);
     const [isLoading, setIsLoading] = React.useState<boolean>(false);
-
+    const router = useRouter();
 
     const updateUserExerciseToProgram = async (msclGrpName:string , exerciseName:string) => {
         let newExercise = exercises.find(ex => ex.name === exerciseName) || null;
@@ -45,9 +45,16 @@ const WorkourProgramService = (props:{children?:ReactNode}) => {
             setExercises(exercisesCache[apiCallParams.muscle])
         }
         else{
-            const exs = await getExercises(apiCallParams);
-            setExercises(exs);
-            exercisesCache[apiCallParams.muscle] = exs;
+            const exs = await getExercises(apiCallParams)
+                .catch(() => null);
+                if(exs == null) {
+                    router.push('404');
+                    return;
+                }
+                else{
+                    setExercises(exs);
+                    exercisesCache[apiCallParams.muscle] = exs;
+                }
         }
     } 
 
