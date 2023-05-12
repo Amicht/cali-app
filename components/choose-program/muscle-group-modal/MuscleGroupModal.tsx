@@ -7,6 +7,7 @@ import { LanguageCtst } from '@/services/context/LanguageService';
 import { WorkourProgramCtxt } from '@/services/context/WorkoutProgramService';
 import { ExerciseModel } from '@/models/ExerciseModel';
 import CostumBtn from '@/components/costum-button/CostumBtn';
+import { cursorTo } from 'readline';
 
 interface Props{
   show:boolean, 
@@ -74,6 +75,7 @@ const MuscleGroupModal = (props:Props) => {
                 
                 {(states!.exercises && (states!.exercises.length > 0))?
                 <Form.Select 
+                  style={{cursor:'pointer'}}
                   className='col-sm bg-secondary text-center text-dark border-dark' 
                   onChange={(e) => onExerciseChange(e.currentTarget.value)}>
 

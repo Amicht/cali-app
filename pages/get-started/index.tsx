@@ -27,7 +27,7 @@ const GetStarted = () => {
       </div>
       <div className='row'>
           {plansScreen.plans.map((p, idx) => 
-            <div className='col-md-4 mt-4' key={'user-plan-'+ idx}>
+            <div className='col-md-6 col-lg-4 mt-4' key={'user-plan-'+ idx}>
               <UserPlan
                 unavailable={plansScreen.unavailable}
                 freePlanName={plansScreen.plans[0].name}
