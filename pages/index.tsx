@@ -45,7 +45,7 @@ export default function Home() {
           
           {btns.map((btn, idx) => 
             <div 
-              className='col-sm-4 mt-2 px-1'
+              className='col-sm-4 col-md-3 mt-2 px-1'
               key={btn.txt + idx}>
 
                 <Link href={btn.link!}>

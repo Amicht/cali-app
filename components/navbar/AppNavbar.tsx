@@ -1,4 +1,3 @@
-'use client'
 import { LanguageCtst } from '../../services/context/LanguageService';
 import React from 'react'
 import ChangeLanguageComponent from './change-language/ChangeLanguage';

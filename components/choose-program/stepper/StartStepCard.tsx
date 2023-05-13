@@ -22,7 +22,7 @@ const StartStepCard = ({isStepsCompleted,startBtnTxt}: Props) => {
 
 
   return (
-    <div className='muscle-group-card mt-4'>
+    <div className='muscle-group-card mt-4 px-4'>
         <h2 style={{direction: direction=== 'rtl'? 'rtl':'ltr'}} 
             className='my-5'>
             {isStepsCompleted? 
@@ -31,7 +31,7 @@ const StartStepCard = ({isStepsCompleted,startBtnTxt}: Props) => {
         </h2>
 
         {isStepsCompleted? 
-            <div onClick={onNextBtnClick} className='pt-4 col-md-4 mx-auto'>
+            <div onClick={onNextBtnClick} className='pt-4 col-md-6 col-sm-8 mx-auto'>
                 <CostumBtn  txt={startBtnTxt} theme='light' />
             </div> : null}
     </div>
